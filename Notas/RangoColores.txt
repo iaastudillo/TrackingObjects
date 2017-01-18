@@ -1,0 +1,23 @@
+¿Cómo encontrar los valores de HSV a seguir?
+
+usa la función cv2.cvtColor (). En lugar de pasar una imagen, simplemente pasa los valores de BGR que deses.
+
+>>> verde = np.uint8([[[0,255,0 ]]])
+>>> hsv_verde = cv2.cvtColor(verde,cv2.COLOR_BGR2HSV)
+>>> print hsv_verde
+    [[[ 60 255 255]]]
+
+
+>>> azul = np.uint8([[[255,0,0 ]]])
+>>> hsv_azul  = cv2.cvtColor(azul ,cv2.COLOR_BGR2HSV)
+>>> print hsv_azul 
+    [[[ 120 255 255]]]
+
+
+>>> amarillo = np.uint8([[[0,255,255 ]]])
+>>> hsv_amarillo = cv2.cvtColor(amarillo,cv2.COLOR_BGR2HSV)
+>>> print hsv_amarillo
+    [[[ 30 255 255]]]
+
+
+Se recomienda tomar [H-10, 100,100] y [H + 10, 255, 255] como límite inferior y límite superior, respectivamente.
